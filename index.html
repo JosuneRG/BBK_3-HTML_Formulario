@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Viejuners</title>
+</head>
+<body>
+    <header>
+        <h1>Viejuner</h1>
+    </header>
+    <main>
+        <form>
+            <h2>El club viejuner</h2>
+            <div>
+                <h3>
+                    <legend> Datos sobre ti:</legend>
+                </h3>
+            </div>
+            <div>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" placeholder="Introduce tu nombre" autofocus>
+            </div>
+            <div>
+                <label for="Apellidos">Apellidos:</label>
+                <input type="text" id="Apellidos" name="Apellidos" placeholder="Introduce tus apellidos">
+            </div>
+            <div>
+                <label for="Edad">Edad:</label>
+                <input type="number" id="Edad" name="Edad" min="1" max="100" step="1" placeholder="Introduce tu edad">
+            </div>
+
+            <div class="opciones-sexo">
+                
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <input type="radio" id="Mujer" name="sexo" value="Mujer">
+                    <label for="Mujer">Mujer</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="Hombre" name="sexo" value="Hombre">
+                    <label for="Hombre">Hombre</label>
+                </div>
+            </div>
+            <div>
+                <label for="Viejuner">Me siento viejuner:</label>
+                <input type="checkbox" id="MeSientoViejuner:" name="Viejuner" value="Viejuner">
+            </div>
+            <div> 
+                <textarea name="message" rows="10" cols="30"> Escribe algo sobre tí:</textarea>
+            </div>
+            <div>
+                <h2> Tus circunstancias:</h2>
+            </div>
+            <div> 
+                <label for="email" >Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Introduce tu email">
+            </div>
+
+            <div>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Introduce tu telefono">
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <form>
+            <div>
+                <legend>Los ladronzuelos de bicicletas</legend>
+            </div>
+            <div>
+                <label for="dia"> Día: </label>
+                <input type="date" id="dia" name="dia" placeholder="Introduce tu dia">
+            </div>
+            <div>
+                <label for="appt"> Hora: </label>
+                <input type="time" id="appt" name="appt" placeholder="Introduce la hora">
+            </div>
+            <div>
+                <label for="favcolor">Color de la bicicleta:</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+            <script>
+                addEventListener('load',inicio,false);
+              
+                function inicio()
+                {
+                  document.getElementById('price').addEventListener('change',cambioprice,false);
+                }
+              
+                function cambioprice()
+                {    
+                  document.getElementById('precio').innerHTML=document.getElementById('price').value;
+                }
+            </script>
+            <div>
+                <label for="price">Rango de precio:</label>
+                <input type="range" id="price" name="price" min="0" max="50">
+                <span id="precio">25</span>
+            </div>
+            
+            <div>                
+                <label>Paseo:</label>
+                <select name="select">
+                    <option value="Señorial">Señorial</option>
+                    <option value="Anti-plebeyos" selected>Anti-plebeyos</option>
+                    <option value="PorEncimaDelHombro">Por Encima del Hombro</option>
+                </select>
+            </div>
+
+            <div>                
+                <label>Montaña:</label>
+                <select name="select">
+                    <option value="Gamusinos">Gamusinos</option>
+                    <option value="Hueleflores" selected>Hueleflores premium</option>
+                    <option value="Fango">Fango lover</option>
+                </select>
+            </div>
+            
+            <div>                
+                <label>Carreras:</label>
+                <select name="select">
+                    <option value="Metroymedio">Metroymedio</option>
+                    <option value="3Tarde" selected>3 de la tarde. Fluorescente edition</option>
+                    <option value="Grupitors">Grupitors</option>
+                </select>
+            </div>
+           
+            <div>
+                <label for="Accesorios">Accesorios:</label>
+                <select name="Accesorios" id="Accesorios" multiple>
+                  <option value="Ruedines">Ruedines</option>
+                  <option value="Pegatinas">Pegatinas</option>
+                  <option value="Cestita">Cestita</option>
+                  <option value="Bomba">Bomba de aire</option>
+    
+                  <option value="Timbre">Timbre</option>
+                  <option value="Foco">Foco</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>¿Qué marca era?:</h3>
+                <ul>
+                    <li>specialized</li>
+                    <li>trek</li>
+                    <li>merida</li>
+                    <li>scott</li>
+                    <li>giant</li>
+                    <li>cube</li>
+                    <li>lapierre</li>
+                    <li>orbea</li>
+                    <li>cannondale</li>
+                    <li>bmc</li>
+                    <li>lapierre</li>
+                    <li>look</li>
+                    <li>protek</li>
+                    <li>megamo</li>
+                    <li>pinarello</li>
+                    <li>bianchi</li>
+                    <li>bh</li>
+                    <li>factor</li>
+                    <li>ghost</li>
+                    <li>cervélo</li>
+                    <li>argon</li>
+                  </ul>  
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    <br>
+    <footer>Coyrigth @josune</footer>
+</body>
+</html>
